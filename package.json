@@ -1,0 +1,22 @@
+{
+  "name": "all-about-readme",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anikayoka/all-about-readme.git"
+  },
+  "author": "Anika Ayoka",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anikayoka/all-about-readme/issues"
+  },
+  "homepage": "https://github.com/anikayoka/all-about-readme#readme",
+  "dependencies": {
+    "inquirer": "^8.2.2"
+  }
+}
