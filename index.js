@@ -46,10 +46,23 @@ const questions = [
   },
   {
     type: 'input',
+    name: 'email',
+    message: 'What is your email address? (Required)',
+    validate: githubInput => {
+      if (githubInput) {
+        return true;
+      } else {
+        console.log('Please enter your email address!');
+        return false;
+      }
+    }
+  },
+  {
+    type: 'input',
     name: 'description',
     message: 'Provide a description of your application. (Required)',
-    validate: descInput => {
-      if (descInput) {
+    validate: description => {
+      if (description) {
         return true;
       } else {
         console.log('Please enter a description!');
@@ -112,18 +125,18 @@ const questions = [
   },
   {
     type: 'checkbox',
-    name: 'built with',
+    name: 'language',
     message: 'Please select the technologies that your application was built with.',
     choices: ['HTML', 'CSS', 'JavaScript', 'Node.js', 'JQuery'],
     validate: licenseInput => {
       if (licenseInput) {
-          return true;
+        return true;
       } else {
-          console.log('Please provide license information!');
-          return false;
+        console.log('Please provide license information!');
+        return false;
       }
-  }
-}, 
+    }
+  },
   {
     type: 'input',
     name: 'screenshotLink',
@@ -195,10 +208,10 @@ const questions = [
 function writeToFile(fileName, data) {
   fs.writeFile(`./dist/${fileName}`, data, err => {
     if (err) {
-        throw err
+      throw err
     };
     console.log('README generated!')
-});
+  });
 };
 
 // TODO: Create a function to initialize app
@@ -208,16 +221,16 @@ function init() {
 
 // Function call to initialize app
 init()
-.then(readmeInfo => {
-  console.log(readmeInfo);
-  return generateMarkdown(readmeInfo);
-})
-.then(pageMD => {
-  return writeFile(pageMD);
-})
-.then(writeFileResponse => {
-  console.log(writeFileResponse.message);
-})
-.catch(err => {
-  console.log(err);
-});
+  .then(readmeInfo => {
+    console.log(readmeInfo);
+    return generateMarkdown(readmeInfo);
+  })
+  .then(pageMD => {
+    return writeFile(pageMD);
+  })
+  .then(writeFileResponse => {
+    console.log(writeFileResponse.message);
+  })
+  .catch(err => {
+    console.log(err);
+  });
