@@ -74,13 +74,6 @@ const questions = [
     type: 'input',
     name: 'link',
     message: 'Please provide a link to your deployed application.',
-    when: ({ contents }) => {
-      if (contents.indexOf('Deployed Application') > -1) {
-        return true;
-      } else {
-        return false;
-      }
-    },
     validate: linkInput => {
       if (linkInput) {
         return true;
@@ -94,13 +87,6 @@ const questions = [
     type: 'input',
     name: 'installation',
     message: 'Please provide required installation instructions for your project. (Required)',
-    when: ({ contents }) => {
-      if (contents.indexOf('Installation') > -1) {
-        return true;
-      } else {
-        return false;
-      }
-    },
     validate: installInput => {
       if (installInput) {
         return true;
@@ -115,14 +101,6 @@ const questions = [
     name: 'license',
     message: 'Which license will you use for your project?',
     choices: ['Mozilla', 'Apache', 'MIT', 'GNU', 'Unlicense'],
-    default: 0,
-    when: ({ contents }) => {
-      if (contents.indexOf('License') > -1) {
-        return true;
-      } else {
-        return false;
-      }
-    },
     validate: licenseInput => {
       if (licenseInput) {
         return true;
@@ -137,15 +115,15 @@ const questions = [
     name: 'built with',
     message: 'Please select the technologies that your application was built with.',
     choices: ['HTML', 'CSS', 'JavaScript', 'Node.js', 'JQuery'],
-    default: 0,
-    when: ({ contents }) => {
-      if (contents.indexOf('Built With') > -1) {
-        return true;
+    validate: licenseInput => {
+      if (licenseInput) {
+          return true;
       } else {
-        return false;
+          console.log('Please provide license information!');
+          return false;
       }
-    }
-  },
+  }
+}, 
   {
     type: 'input',
     name: 'screenshotLink',
@@ -189,13 +167,6 @@ const questions = [
     type: 'input',
     name: 'test',
     message: 'Please provide instructions on how to test the app. (Required)',
-    when: ({ contents }) => {
-      if (contents.indexOf('Tests') > -1) {
-        return true;
-      } else {
-        return false;
-      }
-    },
     validate: testInput => {
       if (testInput) {
         return true;
@@ -209,13 +180,6 @@ const questions = [
     type: 'input',
     name: 'questions',
     message: 'Please provide an email where you can be reached.',
-    when: ({ contents }) => {
-      if (contents.indexOf('Questions') > -1) {
-        return true;
-      } else {
-        return false;
-      }
-    },
     validate: questionsInput => {
       if (questionsInput) {
         return true;
@@ -228,10 +192,32 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+  fs.writeFile(`./dist/${fileName}`, data, err => {
+    if (err) {
+        throw err
+    };
+    console.log('README generated!')
+});
+};
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+  return inquirer.prompt(questions)
+};
 
 // Function call to initialize app
-init();
+init()
+.then(readmeInfo => {
+  console.log(readmeInfo);
+  return generateMarkdown(readmeInfo);
+})
+.then(pageMD => {
+  return writeFile(pageMD);
+})
+.then(writeFileResponse => {
+  console.log(writeFileResponse.message);
+})
+.catch(err => {
+  console.log(err);
+});
