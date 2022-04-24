@@ -14,8 +14,7 @@ function renderLicenseBadge(license) {
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
   if (license !== 'no license') {
-    return `
-    [${license}](https://choosealicense.com/licenses/${license})
+    return `[${license} Guidelines](https://choosealicense.com/licenses/)
       `;
   } else {
     return ' ';
@@ -26,9 +25,8 @@ function renderLicenseLink(license) {
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
   if (license !== 'no license') {
-    return `## [License](#table-of-contents)
+    return `## License
     The application is covered under the following license:
-    ${renderLicenseLink(license)}
       `;
   } else {
     return ' ';
@@ -86,7 +84,8 @@ function generateMarkdown(data) {
   ${data.usage}
   
   ${renderLicenseSection(data.license)}
-
+  ${renderLicenseLink(data.license)}
+  
   ## Contributing
 
   ${data.contribute}
@@ -97,9 +96,9 @@ function generateMarkdown(data) {
 
   ## Questions
 
-  If you have any questions about the repo contact me via email at ${data.email}. You can check out more of my work on my GitHub, ${data.username}.
+  If you have any questions about the repo contact me via email at ${data.email}. You can check out more of my work on my [Github Profile](https://github.com/${data.username})
 
-  ## Developed By
+  ## Author
 
   Made with ❤️ by Anika Ayoka
   

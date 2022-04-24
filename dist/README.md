@@ -1,4 +1,4 @@
-# abc
+# all about
 
   
   ![badge](https://img.shields.io/badge/license-MIT-blue)
@@ -19,12 +19,12 @@
 
   ## Built With
 
-  Node.js
+  HTML,Node.js
 
   ## Links
 
-  * Video walkthrough: https://github.com/anikayoka/all-about-readme
-  * Github: https://github.com/anikayoka/all-about-readme
+  * Video walkthrough: link
+  * Github: all-about--readme
 
   
   ## Srcreenshot
@@ -39,13 +39,11 @@
 
   123
   
-  ## [License](#table-of-contents)
+  ## License
     The application is covered under the following license:
-    
-    [MIT](https://choosealicense.com/licenses/MIT)
       
+  [MIT Guidelines](https://choosealicense.com/licenses/MIT)
       
-
   ## Contributing
 
   undefined
@@ -56,7 +54,9 @@
 
   ## Questions
 
-  If you have any questions about the repo contact me via email at a@gmail.com. You can check out more of my work on my GitHub, goo.
+  If you have any questions about the repo contact me via email at a@gmail.com. You can check out more of my work on my GitHub, anikayoka.
+
+  [Github Profile](https://github.com/anikayoka)
 
   ## Developed By
 
