@@ -217,7 +217,7 @@ init()
     return writeToFile("README.md",pageMD);
   })
   .then(writeFileResponse => {
-    console.log("Markdown Complete - check  /dist/README.md");
+    console.log("Markdown Complete - check .dist/README.md");
   })
   .catch(err => {
     console.log(err);
