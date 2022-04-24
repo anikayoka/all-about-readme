@@ -26,8 +26,7 @@ function renderLicenseLink(license) {
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
   if (license !== 'no license') {
-    return `
-    ## [License](#table-of-contents)
+    return `## [License](#table-of-contents)
     The application is covered under the following license:
     ${renderLicenseLink(license)}
       `;
@@ -40,16 +39,14 @@ function renderLicenseSection(license) {
 // If there is no license, return an empty string
 function renderLicenseTOC(license) {
   if (license !== 'no license') {
-    return `
-  * [License](#license)
-    `;
+    return `* [License](#license)`;
   } else {
     return ' ';
   }
-
-  // TODO: Create a function to generate markdown for README
-  function generateMarkdown(data) {
-    return `# ${data.title}
+}
+// TODO: Create a function to generate markdown for README
+function generateMarkdown(data) {
+  return `# ${data.title}
 
   ${renderLicenseBadge(data.license)}
 
@@ -63,8 +60,7 @@ function renderLicenseTOC(license) {
   * [Tests](#tests)
   * [Questions](#questions)
   
-  ## [Description](#table-of-contents)
-
+  ## Description
   ${data.description}
 
   ## Built With
@@ -73,43 +69,43 @@ function renderLicenseTOC(license) {
 
   ## Links
 
-  * Deployed: ${data.link}
-  * Github: ${repo}
+  * Video walkthrough: ${data.link}
+  * Github: ${data.repo}
+
   
   ## Srcreenshot
 
   ${data.screenshot}
 
-  ## [Installation](#table-of-contents)
+  ## Installation
 
   ${data.installation}
 
-  ## [Usage](#table-of-contents)
+  ## Usage
 
   ${data.usage}
   
   ${renderLicenseSection(data.license)}
 
-  ## [Contributing](#table-of-contents)
+  ## Contributing
 
-  ${renderContributingSection(data.confirmContributers, data.contribute)}
+  ${data.contribute}
 
-  ## [Tests](#table-of-contents)
+  ## Tests
 
   ${data.test}
 
-  ## [Questions](#table-of-contents)
+  ## Questions
 
   If you have any questions about the repo contact me via email at ${data.email}. You can check out more of my work on my GitHub, ${data.username}.
 
-  ## Contribution
+  ## Developed By
 
   Made with ❤️ by Anika Ayoka
   
   ### ©️2022 All About Readme 
 
 `;
-  }
+}
 
 module.exports = generateMarkdown;
-}

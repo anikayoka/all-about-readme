@@ -86,12 +86,12 @@ const questions = [
   {
     type: 'input',
     name: 'link',
-    message: 'Please provide a link to your deployed application.',
-    validate: linkInput => {
-      if (linkInput) {
+    message: 'Please provide a video link that demonstrates functionality.',
+    validate: videoLink => {
+      if (videoLink) {
         return true;
       } else {
-        console.log('Please enter a link!');
+        console.log('Please enter a link to video walkthrough!');
         return false;
       }
     }
@@ -189,28 +189,16 @@ const questions = [
       }
     }
   },
-  {
-    type: 'input',
-    name: 'questions',
-    message: 'Please provide an email where you can be reached.',
-    validate: questionsInput => {
-      if (questionsInput) {
-        return true;
-      } else {
-        console.log('Please provide an email address!');
-        return false;
-      }
-    }
-  }
 ];
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-  fs.writeFile(`./dist/${fileName}`, data, err => {
+  fs.writeFileSync(`./dist/${fileName}`, data, err => {
     if (err) {
       throw err
     };
     console.log('README generated!')
+    return({message:"Markdown file generated"})
   });
 };
 
@@ -226,10 +214,10 @@ init()
     return generateMarkdown(readmeInfo);
   })
   .then(pageMD => {
-    return writeFile(pageMD);
+    return writeToFile("README.md",pageMD);
   })
   .then(writeFileResponse => {
-    console.log(writeFileResponse.message);
+    console.log(writeFileResponse);
   })
   .catch(err => {
     console.log(err);
