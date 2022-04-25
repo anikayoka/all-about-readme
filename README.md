@@ -29,7 +29,8 @@
   
   ## Srcreenshot
 
-  
+  ![screencapture-github-anikayoka-all-about-readme-tree-main-dist-2022-04-24-21_40_27](https://user-images.githubusercontent.com/88905488/165007313-51b28b4a-a95c-40a1-af16-1bd4604140c3.png)
+
 
   ## Installation
 
