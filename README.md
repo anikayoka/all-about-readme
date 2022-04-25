@@ -23,7 +23,7 @@
 
   ## Links
 
-  * Video walkthrough: https://drive.google.com/file/d/1XZj4lOXpAfMKp34G989WQB5kUl-U_V0i/view?usp=sharing
+  * Video walkthrough: https://drive.google.com/file/d/1l9x7OK58xrKzhoMlcmmGPlHT8239H7nK/view?usp=sharing
   * Github: https://github.com/anikayoka/all-about-readme
 
   

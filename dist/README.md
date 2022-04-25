@@ -23,8 +23,8 @@
 
   ## Links
 
-  * Video walkthrough: NA
-  * Github: ttps://github.com/anikayoka/all-about-readme
+  * Video walkthrough: https://drive.google.com/file/d/1l9x7OK58xrKzhoMlcmmGPlHT8239H7nK/view?usp=sharing
+  * Github: https://github.com/anikayoka/all-about-readme
 
   
   ## Screenshot
@@ -37,7 +37,7 @@
 
   ## Usage
 
-  After installation is complete, run the following code: ‘node inex.js’ in the terminal. Answer the prompts and after completion, you should see a console log showing your answers to your prompts, a message that says ‘"Markdown Complete - check .dist/README.md"‘ generated in mark down syntax use command+shift+v to view in markdown preview!
+  After installation is complete, run the following code: ‘node index.js’ in the terminal. Answer the prompts and after completion, you should see a console log showing your answers to your prompts, a message that says ‘"Markdown Complete - check .dist/README.md"‘ generated in mark down syntax use command+shift+v to view in markdown preview!
   
   ## License
     The application is covered under the following license:
