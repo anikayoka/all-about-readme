@@ -138,19 +138,6 @@ const questions = [
     }
   },
   {
-    type: 'input',
-    name: 'screenshotLink',
-    message: 'Please provide a link for your screenshot. (Required)',
-    validate: screenshotInput => {
-      if (screenshotInput) {
-        return true;
-      } else {
-        console.log('Please provide a link for your screenshot!')
-        return false;
-      }
-    }
-  },
-  {
     type: 'confirm',
     name: 'confirmContributers',
     message: 'Would you like to allow other developers to contribute?',

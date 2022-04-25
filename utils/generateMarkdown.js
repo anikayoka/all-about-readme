@@ -71,13 +71,9 @@ function generateMarkdown(data) {
   * Github: ${data.repo}
 
   
-  ## Srcreenshot
+  ## Screenshot
 
-  ${data.screenshot}
-
-  To learn more about how to add screenshots for examples, visit the following website:
-  
-  [Markdown Cheatsheet] (https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#links)
+  ![README generator] (.dist/images/screenshot)
 
   ## Installation
 

@@ -23,17 +23,14 @@
 
   ## Links
 
-  * Video walkthrough: NA
+  * Video walkthrough: none yet
   * Github: https://github.com/anikayoka/all-about-readme
 
   
-  ## Srcreenshot
+  ## Screenshot
 
-  undefined
+  ![README generator] (.dist/images/screenshot.png?raw=true "All About Readme")
 
-  To learn more about how to add screenshots for examples, visit the following website:
-  
-  [Markdown Cheatsheet] (https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#links)
 
   ## Installation
 
